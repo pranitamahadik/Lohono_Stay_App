@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :villa do
+    collection do
+      get 'fetch_villas_details'
+      get 'calculate_total_rate'
+    end
+  end
 end
